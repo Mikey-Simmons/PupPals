@@ -16,7 +16,16 @@
 
 <body>
     <div id="container">
-    <h1>Sign Up for PupPals!</h1>
+    <div id="reg-container">
+    <h1 class="display-4">PupPals!</h1>
+    <h2 class="display-6">Please fill out the form below!</h2>
+    {% if messages %}
+        <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
     <form id="reg" action="/register" method="post">
         {% csrf_token %}
         <div class="mb-3">
@@ -25,7 +34,10 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="dog_gender">Dog's Gender</label>
-            <input class="form-control" type="text" name="dog_gender" id="dog_gender">
+            <select class="form-control"  name="dog_gender" id="dog_gender">
+                <option value="Male" >Male</option>
+                <option value="Female" >Female</option>
+                 </select>
         </div>
         <div class="mb-3">
             <label class="form-label" for="dog_breed">Dog's Breed</label>
@@ -126,8 +138,16 @@
             <input class="form-control" type="password" name="confirm_password" id="confirm_password">
         </div>
             <button class="btn btn-success" type="submit">Register!</button>
+            
+        </form>
+        <br>
+        <form action="/">
+            <button type="submit" class="btn btn-danger">Go Back</button>
+          </form>
         </div>
-    </form>
+        
+        
+</div>
 </div>
 </body>
 
