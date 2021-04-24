@@ -23,6 +23,7 @@ def login(request):
             request.session['user_id'] = user.id
             print('login successful')
             return redirect('/welcome')
+    #logic for logging in
 
 
     return redirect('/')
@@ -37,6 +38,7 @@ def welcome(request):
         return render(request,'welcome.html',context)
     else:
         return redirect('/')
+    #If a login is succesful it will redirect user to the main home page
 def register(request):
     errors = User.objects.basic_validator(request.POST)
     if len(errors)>0:

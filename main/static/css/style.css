@@ -13,11 +13,10 @@
 }
 h1{
     font-family: 'Cabin', sans-serif;
-    font-size: 75px;
-    justify-content: center;
+    font-size: 60px;
+    justify-content: left;
     display: flex;
-    background-color: #4267b2;
-    color: #f0f2f5;
+    
 }
 #container{
     background-color: #f0f2f5;
@@ -31,4 +30,46 @@ h1{
 button{
     font-family: 'Cabin', sans-serif;
     font-size: x-large !important;
+}
+li{
+    color: red;
+    font-family: 'Cabin', sans-serif;
+    font-size: x-large !important;
+}
+nav{
+    background-color: #4267b2  !important;
+    color: #f0f2f5 !important;
+    
+} 
+.bg-light{
+    background-color:#4267b2  !important;
+    
+}
+a.nav-link{
+    color: #f0f2f5 !important;
+    font-size: xx-large;
+    font-family: 'Cabin', sans-serif;
+    
+}
+a.navbar-brand{
+    color: #f0f2f5 !important;
+    font-size: xx-large;
+    font-family: 'Cabin', sans-serif;
+}
+h1.display-4{
+    background-color: #4267b2;
+    color: #f0f2f5 !important;
+    justify-content: center;
+    display: flex;
+}
+table{
+    font-size: x-large;
+    font-family: 'Cabin', sans-serif;
+}
+h1.display-5{
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    color: #f0f2f5 !important;
+    font-family: 'Cabin', sans-serif;
 }

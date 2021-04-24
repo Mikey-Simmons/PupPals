@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="icon" href="static/imgs/pupPals.png">
   </head>
 
 <body>
@@ -17,6 +18,13 @@
         <h1 class="display-4">PupPals</h1>
         <h2 class="display-6">Please Sign in!</h2>
     </div>
+    {% if messages %}
+        <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
     <form id="reg" method="post" action="/login">
       {% csrf_token %}
         <div class="mb-3">
@@ -30,16 +38,11 @@
          
         <button type="submit" class="btn btn-primary">Sign In</button>
       </form>
+      <br>
       <form action="/signup">
       <button type="submit" class="btn btn-danger">Sign up</button>
     </form>
-    {% if messages %}
-        <ul class="messages">
-                {% for message in messages %}
-                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-                {% endfor %}
-        </ul>
-        {% endif %}
+    
       </div>
       </body>
 
