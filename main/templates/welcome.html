@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
   <title>Welcome</title>
   <link rel="icon" href="http://example.com/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,13 +31,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="account">Account</a>
+              <a class="nav-link" href="user/{{logged_in_user.id}}">Account</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="puppies">Puppies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus">About us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="logout">Logout</a>
@@ -47,8 +46,8 @@
     <div class="jumbotron">
       <h1 class="display-5">Welcome {{logged_in_user.dog_owner_first}} & {{logged_in_user.dog_name}}!</h1>
     </div>
-    <h1>Local PupPals in {{logged_in_user.dog_city}}, {{logged_in_user.dog_state}}:</h1>
-    <table class="table table-striped">
+    <h1 class="display-3">Local PupPals in {{logged_in_user.dog_city}}, {{logged_in_user.dog_state}}:</h1>
+    <table class="table table">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -65,7 +64,7 @@
           {%for user in all_users%}
           {%if user.dog_state == logged_in_user.dog_state %}
           {%if user.dog_city == logged_in_user.dog_city %}
-          <th scope="row"> {{user.dog_name}}</th>
+          <th scope="row"><a href="/user/{{user.id}}">{{user.dog_name}}</a></th>
           <td>{{user.dog_age}}</td>
           <td>{{user.dog_gender}}</td>
           <td>{{user.dog_weight}} lbs.</td>
@@ -79,8 +78,8 @@
 
       </tbody>
     </table>
-    <h1>All PupPals in {{logged_in_user.dog_state}}:</h1>
-    <table class="table table-striped">
+    <h1 class="display-3">All PupPals in {{logged_in_user.dog_state}}:</h1>
+    <table class="table table">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -96,7 +95,7 @@
         <tr>
           {%for user in all_users%}
           {%if user.dog_state == logged_in_user.dog_state %}
-          <th scope="row"> {{user.dog_name}}</th>
+          <th scope="row"> <a href="/user/{{user.id}}">{{user.dog_name}}</a></th>
           <td>{{user.dog_age}}</td>
           <td>{{user.dog_gender}}</td>
           <td>{{user.dog_weight}} lbs.</td>

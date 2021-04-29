@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PupPal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- load Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+  <title>Welcome</title>
+  <link rel="icon" href="http://example.com/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">PupPals</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/welcome">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Account</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="puppies">Puppies</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <h1 class="display-3">{{view_user.dog_name}}</h1>
+        <div class="card" style="width: 40rem;">
+            <img src="../static/imgs/pupPals.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{view_user.dog_name}}</h5>
+              <ul>
+                <li class="dog_card">Breed: {{view_user.dog_breed}}</li>
+                <li class="dog_card">Weight: {{view_user.dog_weight}} lbs.</li>
+                <li class="dog_card">Age: {{view_user.dog_age}}</li>
+                <li class="dog_card">{{view_user.dog_gender}}</li>
+                <li class="dog_card">Owner: {{view_user.dog_owner_first}}</li>
+                <li class="dog_card">Location: {{view_user.dog_city}}, {{view_user.dog_state}}</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Send PupPal Request</a>
+            </div>
+          </div>
+    </div>
+</body>
+
+</html>

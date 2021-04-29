@@ -67,3 +67,9 @@ def register(request):
 def logout(request):
     request.session.clear()
     return redirect('/')
+def user(request, num):
+    view_user = User.objects.get(id=num)
+    context ={
+        'view_user': view_user,
+    }
+    return render(request, 'users.html', context)
