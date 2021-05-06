@@ -6,28 +6,29 @@
     background-color: #f0f2f5;
 }
 
+
 h1.display-3{
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Alata', sans-serif;;
     font-size: 40px;
 }
 .mb-3{
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Alata', sans-serif;;
     font-size: x-large
 }
 h1{
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Alata', sans-serif;
     font-size: 60px;
     justify-content: left;
     display: flex;
-    color: #DDD92A !important;
+    color: black !important;
     
 }
 #container{
-    background-color: #2D2A32;
-    padding: 50px;
+    background-color:whitesmoke;
+    
 }
 #reg-container{
-    background-color: 2D2A32;
+    background-color: #18F2B2;
     justify-content: center;
     display: grid;
 }
@@ -47,36 +48,36 @@ nav{
     
 } 
 .bg-light{
-    background-color:#DDD92A !important;
+    background-color: #4285F4 !important;
     
 }
 a.nav-link{
-    color: #2D2A32 !important;
+    color:  whitesmoke !important;
     font-size: xx-large;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Alata', sans-serif;
 }
 a.navbar-brand{
-    color: #2D2A32 !important;
+    color: whitesmoke !important;
     font-size: xx-large;
     font-family: 'Rock Salt', cursive;
 }
 h1.display-4{
     background-color: #4267b2;
-    color: #DDD92A !important;
+    color: whitesmoke !important;
     justify-content: center;
     display: flex;
-    font-family: 'Rock Salt', cursive !important;
+    font-family: 'Alata', sans-serif;
 }
 table{
     font-size: x-large;
-    font-family: 'Rock Salt', cursive !important;;
-    color: #DDD92A !important;
+    font-family: 'Alata', sans-serif;
+    color: black !important;
 }
 h1.display-5{
     justify-content: center;
     display: flex;
-    font-family: 'Rock Salt', cursive !important;
-    color: #DDD92A !important;
+    font-family: 'Alata', sans-serif;
+    color: black !important;
     
 }
 a{

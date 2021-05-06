@@ -31,3 +31,6 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
+class Pictures(models.Model):
+    img = models.FileField(default=None,null=True)
+    uploaded_by = models.ForeignKey(User, related_name="profile_pic",on_delete = models.CASCADE)
